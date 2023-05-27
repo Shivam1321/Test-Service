@@ -1,6 +1,6 @@
 from mongoengine import Document, StringField, EmailField, IntField, ListField , DateTimeField, ObjectIdField , ReferenceField
 from datetime import datetime
-from orm.user import User
+from models.user import User
 
 class Test(Document):
    category = StringField(required= True)

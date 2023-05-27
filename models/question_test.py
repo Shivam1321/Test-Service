@@ -1,7 +1,9 @@
 from mongoengine import Document, StringField, EmailField, IntField, ListField , DateTimeField, ObjectIdField, ReferenceField
 from datetime import datetime
-from orm.test import Test
-from orm.mcq import Mcq
+from models.test import Test
+from models.mcq import Mcq
+
+
 class question_test(Document):
    mcq_id = ReferenceField(Mcq)
    test_id = ReferenceField(Test)

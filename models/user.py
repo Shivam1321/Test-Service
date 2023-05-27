@@ -4,7 +4,7 @@ from datetime import datetime
 class User(Document):
     email= EmailField(required=True)
     username = StringField(max_length=50)
-    password = StringField(max_length=50)
+    password = StringField(max_length=10000000)
     first_name = StringField(max_length=50)
     last_name = StringField(max_length=50)
     address = StringField(max_length=100)
