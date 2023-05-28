@@ -10,6 +10,7 @@ tests = Blueprint('tests', __name__, url_prefix='/api/v1/tests')
 @tests.route("/register", methods =["POST"])
 @jwt_required()
 def register():
+    current_user = get_jwt_identity()
     new_test = request.get_json()
     mcqs_test = new_test["mcqs"]
     passing_marks = new_test["passing_marks"]
