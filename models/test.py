@@ -3,12 +3,14 @@ from datetime import datetime
 from models.user import User
 
 class Mcq(EmbeddedDocument):
+   question_no = IntField()
    question = StringField(max_length=100)
    category = StringField(max_length=100)
    answers = ListField(StringField(max_length=200))
    right_answer = StringField(max_length=200)
    right_answer_index = IntField(min_value=0,max_value=3)
    marks_assigned = IntField()
+
 
 class Test(Document):
    # category = StringField(required= True)
